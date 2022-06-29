@@ -1,0 +1,38 @@
+//
+//  Player.h
+//  Project 1
+//
+//  Created by Izak Bunda on 4/3/22.
+//
+
+#ifndef PLAYER_H
+#define PLAYER_H
+
+class Mesa;
+
+class Player
+{
+  public:
+        // Constructor
+    Player(Mesa *mp, int r, int c);
+
+        // Accessors
+    int  row() const;
+    int  col() const;
+    int  age() const;
+    bool isDead() const;
+
+        // Mutators
+    void   stand();
+    void   moveOrAttack(int dir);
+    void   setDead();
+
+  private:
+    Mesa* m_mesa;
+    int   m_row;
+    int   m_col;
+    int   m_age;
+    bool  m_dead;
+};
+
+#endif /* Player_h */
